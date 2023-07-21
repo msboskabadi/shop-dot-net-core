@@ -1,8 +1,8 @@
-﻿@model List<Product>
+﻿@model PageData<Product>
 <h1>hi this is me!!! mean's sajjad</h1>
 
 
-@foreach(var item in Model)
+@foreach(var item in Model.Data)
 {
     <div>
         <h4>
@@ -13,6 +13,8 @@
         </p>
     </div>
 }
+
+<div page-model="Model.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="" page-class-selected="btn-success"></div>
 
 
 

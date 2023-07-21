@@ -6,15 +6,15 @@ namespace ShopUI.Controllers
     public class HomeController : Controller
     {
         private readonly IProductRepository productRepository;
+        private int pageSize = 1;
         public HomeController(IProductRepository productRepository)
         {
             this.productRepository = productRepository;
         }
-
-
-        public IActionResult Index()
+        public IActionResult Index(int pageNumber = 1)
         {
-            return View(productRepository.GetAll());
+            var res = productRepository.GetAll(pageNumber, pageSize);
+            return View(productRepository.GetAll(pageNumber, pageSize));
         }
     }
 }
