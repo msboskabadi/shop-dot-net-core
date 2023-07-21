@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\dot-net-core\\work-shop-1\\work-shop\\ShopUI\\ShopUI.csproj": {}
+    "C:\\Users\\HP\\Desktop\\dot-net-core\\shop\\shop\\ShopUI\\ShopUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\dot-net-core\\work-shop-1\\work-shop\\ShopUI\\ShopUI.csproj": {
+    "C:\\Users\\HP\\Desktop\\dot-net-core\\shop\\shop\\ShopUI\\ShopUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\dot-net-core\\work-shop-1\\work-shop\\ShopUI\\ShopUI.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\dot-net-core\\shop\\shop\\ShopUI\\ShopUI.csproj",
         "projectName": "ShopUI",
-        "projectPath": "C:\\Users\\HP\\Desktop\\dot-net-core\\work-shop-1\\work-shop\\ShopUI\\ShopUI.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\dot-net-core\\shop\\shop\\ShopUI\\ShopUI.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\dot-net-core\\work-shop-1\\work-shop\\ShopUI\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\dot-net-core\\shop\\shop\\ShopUI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.TagHelpers": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.0-preview.6.23329.4, )"

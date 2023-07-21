@@ -15,11 +15,15 @@ app.UseStatusCodePages();
 app.UseStaticFiles();   
 app.UseRouting(); // routing
 
-app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapControllerRoute("pagination", "/{controller=home}/{action=index}/Page{pageNumber}");
-            endpoints.MapDefaultControllerRoute();
-        }
-    );
 
+
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute("pagination", "/{controller=home}/{action=index}/{category}/Page{PageNumber}");
+    endpoints.MapControllerRoute("pagination", "/{controller=home}/{action=index}/Page{PageNumber}");
+    endpoints.MapControllerRoute("pagination", "/{controller=home}/{action=index}/{category}");
+    endpoints.MapDefaultControllerRoute();
+}
+    );
 app.Run();

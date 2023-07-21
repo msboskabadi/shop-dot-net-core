@@ -8,7 +8,10 @@
         {
             this.storeDbContext = storeDbContext;
         }
-        public PageData<Product> GetAll(int pageNumber, int pageSize)
+
+
+
+        public PageData<Product> GetAll(int pageNumber, int pageSize, string category)
         {
             var result = new PageData<Product>
             {
@@ -19,11 +22,13 @@
                 }
             };
 
-            result.Data = storeDbContext.Products.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
-            result.PageInfo.TotalCount = storeDbContext.Products.Count();
-            var test = storeDbContext.Products.Count();
-            return result;      
+            result.Data = storeDbContext.Products.Where(c => string.IsNullOrEmpty(category) || c.Category == category).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+            result.PageInfo.TotalCount = storeDbContext.Products.Where(c => string.IsNullOrEmpty(category) || c.Category == category).Count();
+            return result;
         }
+
+        public List<string> GetAllCategories() =>
+            storeDbContext.Products.Select(c => c.Category).Distinct().ToList();
     }
 }
  

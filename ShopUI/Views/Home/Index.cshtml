@@ -1,20 +1,8 @@
-﻿@model PageData<Product>
-<h1>hi this is me!!! mean's sajjad</h1>
+﻿@model ProductListViewModel
+<h1>Wellcome to ASP.NET Core 06</h1>
 
-
-@foreach(var item in Model.Data)
+@foreach (var item in Model.Data.Data)
 {
-    @Html.Partial("ProductSummary", item)
+    @Html.Partial("ProductSummary",item)
 }
-
-<div page-model="Model.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="" page-class-selected="btn-success"></div>
-
-
-
-
-
-
-
-
-
-
+<div class="btn-group m-1" page-model="Model.Data.PageInfo" page-action="Index" page-classes-enabled="true" page-class="btn" page-class-normal="btn-outline-dark" page-class-selected="btn-success"></div>
