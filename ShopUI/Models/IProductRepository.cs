@@ -2,6 +2,6 @@
 {
     public interface IProductRepository
     {
-        PageData<Product> GetAll(int pageSize, int pageNumber);
+        PageData<Product> GetAll(int pageNumber, int pageSize);
     }
 }
